@@ -1,0 +1,33 @@
+{
+  "name": "tokens-grpc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon index.js | ./node_modules/.bin/bunyan",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hellowhytazasho/tokens-grpc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hellowhytazasho/tokens-grpc/issues"
+  },
+  "homepage": "https://github.com/hellowhytazasho/tokens-grpc#readme",
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "bunyan": "^1.8.14",
+    "config": "^3.3.1",
+    "mongoose": "^5.10.0",
+    "ms": "^2.1.2"
+  }
+}
