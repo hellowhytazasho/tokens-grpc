@@ -8,7 +8,7 @@ const SchemaDefinition = {
     type: String,
     require: true,
   },
-  data: {
+  tokenData: {
     type: String,
     default: '',
   },
@@ -25,8 +25,10 @@ const TokensSchema = new Schema(
 
 TokensSchema.virtual('isValid').get(function isValidGetter() {
   const ttlMS = ms(this.ttl);
-  return (Date.now() - (this.createdAt + ttlMS)) > 0;
+  return ((this.createdAt.getTime() + ttlMS) - Date.now()) > 0;
 });
+
+TokensSchema.index({ token: 1 }, { unique: true });
 
 const Tokens = mongoose.model('token', TokensSchema);
 

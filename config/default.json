@@ -9,6 +9,19 @@
       "database": "travel-blog-tokens-grpc"
     }
   },
+  "grpc": {
+    "connection": {
+      "host": "localhost",
+      "port": "3009"
+    },
+    "services": {
+      "tokens": {
+        "name": "Tokens",
+        "proto": "tokens.proto"
+      }
+    },
+    "protoPath": "./src/protos"
+  },
   "token": {
     "ttl": "5m"
   }

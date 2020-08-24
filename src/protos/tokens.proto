@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+service Tokens {
+  rpc issueToken(tokensItemRequest) returns (tokensItemReply);
+  rpc verifyToken(tokensItemsRequest) returns (tokensItemsReply);
+}
+
+
+message tokensItemRequest {
+  string tokenData = 1;
+  string tokenTTL = 2;
+}
+
+message tokensItemsRequest {
+  string token = 1;
+}
+
+message tokensItemReply {
+  string token = 1;
+}
+
+message tokensItemsReply {
+  string data = 1;
+  bool isValid = 2;
+}

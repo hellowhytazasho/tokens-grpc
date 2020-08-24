@@ -1,6 +1,7 @@
 {
   "delay": 100,
   "stdout": true,
+  "ext": "js,json,proto",
   "env": {
     "NODE_ENV": "development"
   }

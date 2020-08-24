@@ -1,0 +1,25 @@
+{
+  "logger": {
+    "level": "info"
+  },
+  "mongodb": {
+    "connection": {
+      "username": "MONGODB_USERNAME",
+      "password": "MONGODB_PASSWORD",
+      "uri": "DB_URL",
+      "host": "MONGODB_HOST",
+      "port": "MONGODB_PORT",
+      "database": "MONGODB_DATABASE"
+    }
+  },
+  "grpc": {
+    "connection": {
+      "host": "GRPS_HOST",
+      "port": "GRPS_PORT"
+    },
+    "protoPath": "PROTO_PATH"
+  },
+  "token": {
+    "ttl": "TOKEN_TTL"
+  }
+}

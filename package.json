@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "nodemon index.js | ./node_modules/.bin/bunyan",
+    "start:debug": "nodemon --inspect=0.0.0.0:$npm_config_inspect index.js | ./node_modules/.bin/bunyan",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,8 +26,11 @@
     "nodemon": "^2.0.4"
   },
   "dependencies": {
+    "@grpc/grpc-js": "^1.1.5",
+    "@grpc/proto-loader": "^0.5.5",
     "bunyan": "^1.8.14",
     "config": "^3.3.1",
+    "grpc": "^1.24.3",
     "mongoose": "^5.10.0",
     "ms": "^2.1.2"
   }

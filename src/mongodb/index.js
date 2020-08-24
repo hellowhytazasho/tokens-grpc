@@ -8,7 +8,7 @@ const getConnectionString = ({ mongodb }) => {
     password,
     host,
     port,
-    db,
+    database,
   } = mongodb.connection;
 
   if (uri) {
@@ -17,8 +17,8 @@ const getConnectionString = ({ mongodb }) => {
 
   return (
     (username && password)
-      ? `mongodb://${username}:${password}@${host}:${port}/${db}?authSource=admin`
-      : `mongodb://${host}:${port}/${db}`
+      ? `mongodb://${username}:${password}@${host}:${port}/${database}?authSource=admin`
+      : `mongodb://${host}:${port}/${database}`
   );
 };
 
